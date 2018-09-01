@@ -1,0 +1,42 @@
+<html>
+    <head>
+  		<meta charset="utf-8">
+    	<title>Friends online</title>
+    	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" )>
+	</head>
+    <body>
+    	<div class='welcome_wrap'>
+			<h1 align="center">Welcome to Friends online!</h1>
+    		<hr>
+    		<form action="" method="post" name="id" align="center">
+                {{form.hidden_tag()}}
+    			<p>
+     	   			Please input the ID or nickname of the user vk.com:<br>
+                    {{ form.user_id(size=20, class='login') }}
+                    <input class='botton' type="submit" value="Go"> <br>         
+    			</p>
+    		</form>
+    		<div class='content_wrap'>
+
+    				{% if list_of_friends %}
+    					{% if list_of_friends[0].first_name %}
+    					<table>
+    						{% for items, friend in enumerate(list_of_friends) %}
+    						<tr>
+    							<td>{{items+1}}. </td>
+    							<td><font size='4'>{{ friend.first_name}}</font></td> 
+    							<td><font size='4'>{{friend.last_name}}</font></td> 
+    							<td><a href={{friend.url}} target="_blank"> {{friend.url}} </a></td>
+    						</tr>
+    						{% endfor %}
+    					</table>
+    					{% else %}
+    						{{ list_of_friends }} <br>
+    					{% endif %}
+                    {% else %}
+                        <div  align="center">Here you can see the friends of any user vk.com, who are online now.</div>
+    				{% endif %}	 
+    		</div>
+   		</div>
+	</body>
+</html>

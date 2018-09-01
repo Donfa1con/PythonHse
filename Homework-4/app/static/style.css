@@ -1,0 +1,31 @@
+body { 
+   	background-color: #bdbdbd;
+   	min-width: 340px;
+   	color: #2c2c2c;
+   	
+}
+
+a{
+	font-size: 14px;
+	padding-left: 20px;
+	color: #3370af;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.welcome_wrap{
+	padding-top: 20px;
+	padding-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+	background-color: #009d76;
+	color: #fff;
+}
+
+.content_wrap{
+	padding: 20px;
+	color: black;
+	background-color: #fff;
+}
